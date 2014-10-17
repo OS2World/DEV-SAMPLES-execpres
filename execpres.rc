@@ -1,0 +1,45 @@
+#define INCL_PM
+#include <os2.h>
+#include "execpres.h"
+
+DLGTEMPLATE IDD_TOP LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "EXECPRES", IDD_TOP, 91, 60, 299, 148, FS_SCREENALIGN |
+            WS_VISIBLE, FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", IDE_PROGRAM, 6, 125, 161, 8, ES_MARGIN
+        ENTRYFIELD      "", IDE_PARMS, 6, 103, 161, 8, ES_MARGIN
+        ENTRYFIELD      "", IDE_DIRECTORY, 6, 80, 161, 8, ES_MARGIN
+        ENTRYFIELD      "", IDE_ENV, 6, 56, 161, 8, ES_MARGIN
+        GROUPBOX        "Type", -1, 175, 55, 116, 90
+        AUTORADIOBUTTON "Presentation Manager", IDR_PM, 181, 126, 103, 10,
+                        BS_NOCURSORSELECT | WS_GROUP | WS_TABSTOP
+        AUTORADIOBUTTON "OS/2 Window", IDR_WINDOW, 181, 116, 93, 10,
+                        BS_NOCURSORSELECT
+        AUTORADIOBUTTON "OS/2 Fullscreen", IDR_FULLSCRN, 181, 106, 93, 10,
+                        BS_NOCURSORSELECT
+        AUTORADIOBUTTON "DOS Window", IDR_DOSWIN, 181, 96, 93, 10,
+                        BS_NOCURSORSELECT
+        AUTORADIOBUTTON "DOS Fullscreen", IDR_DOSFS, 181, 86, 93, 10,
+                        BS_NOCURSORSELECT
+        AUTORADIOBUTTON "Windows Seamless", IDR_WINSEAMLESS, 181, 76, 93, 10,
+                        BS_NOCURSORSELECT
+        AUTORADIOBUTTON "Windows FullScreen", IDR_WINFS, 181, 66, 98, 10,
+                        BS_NOCURSORSELECT
+        GROUPBOX        "Foreground", -1, 176, 27, 104, 24, NOT WS_GROUP
+        AUTORADIOBUTTON "No", IDR_NO, 187, 31, 24, 10, WS_GROUP | WS_TABSTOP
+        AUTORADIOBUTTON "Yes", IDR_YES, 225, 31, 29, 10, WS_TABSTOP
+        PUSHBUTTON      "~Run", DID_OK, 4, 6, 51, 14
+        PUSHBUTTON      "~Clear", DID_CANCEL, 61, 6, 51, 14
+        PUSHBUTTON      "~Exit", IDB_EXIT, 118, 6, 51, 14
+        LTEXT           "Program", -1, 4, 136, 35, 8
+        LTEXT           "Parameters", -1, 4, 114, 48, 8
+        LTEXT           "Startup Directory", -1, 4, 91, 72, 8
+        LTEXT           "Environment Variables", -1, 4, 67, 94, 8
+        GROUPBOX        "", -1, 4, 26, 165, 24
+        AUTORADIOBUTTON "DosStartSession", IDR_DOS, 11, 31, 81, 10,
+                        WS_TABSTOP|WS_GROUP|BS_NOCURSORSELECT
+        AUTORADIOBUTTON "WinStartApp", IDR_WIN, 97, 31, 65, 10, BS_NOCURSORSELECT
+    END
+END
+

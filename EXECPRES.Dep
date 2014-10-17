@@ -1,0 +1,13 @@
+.\executil.obj: \
+    e:\bryan\execsrce\executil.c \
+    EXECPRES.MAK
+
+.\execpres.obj: \
+    e:\bryan\execsrce\execpres.c \
+    {e:\bryan\execsrce;$(INCLUDE);}execpres.h \
+    EXECPRES.MAK
+
+.\runprog.obj: \
+    e:\bryan\execsrce\runprog.c \
+    EXECPRES.MAK
+
